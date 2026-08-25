@@ -2,7 +2,7 @@ cff-version: 1.2.0
 title: "控制工程基础知识体系"
 message: "如在学习项目或二次整理中使用，请引用本仓库。"
 type: dataset
-version: "1.0.0"
+version: "1.1.0"
 date-released: "2026-08-25"
 authors:
   - family-names: "a1649153754-sketch"
