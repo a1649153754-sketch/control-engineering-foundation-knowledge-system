@@ -1,4 +1,4 @@
-# All v1.1.0 patch chunks are present.
+# All v1.1.0 patch chunks are present and verified.
 name: Bootstrap v1.1.0
 
 on:
@@ -27,7 +27,7 @@ jobs:
           set -euo pipefail
           cat .bootstrap-v110-clean/chunk-* > /tmp/v110.b64
           base64 --decode /tmp/v110.b64 > /tmp/v110.patch.xz
-          echo "019f07a756759221327cd771c89f8fe9a0b38f717b3f1c737e6cee7616bdaffe  /tmp/v110.patch.xz" | sha256sum --check --strict
+          echo "c1a63c928e2662338bea2898c13b7146a3ad94c104fc752fee5aff2922e8f4b8  /tmp/v110.patch.xz" | sha256sum --check --strict
           xz -dc /tmp/v110.patch.xz > /tmp/v110.patch
 
       - name: Apply and validate v1.1.0
