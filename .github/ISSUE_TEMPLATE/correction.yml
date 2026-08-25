@@ -1,0 +1,20 @@
+name: 内容纠错
+description: 报告概念、公式条件、题型挂接或页码错误
+title: "[纠错] "
+body:
+  - type: input
+    id: location
+    attributes:
+      label: 节点/卡片/页码
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: 问题与证据
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: 建议修正

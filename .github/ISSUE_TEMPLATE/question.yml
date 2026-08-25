@@ -1,0 +1,18 @@
+name: 学习问题
+description: 提交可挂接到 C/Q/B/J-C 的控制工程问题
+title: "[问题] "
+body:
+  - type: input
+    id: source
+    attributes:
+      label: 来源（章节/题号，不粘贴全文）
+  - type: textarea
+    id: question
+    attributes:
+      label: 具体疑问
+    validations:
+      required: true
+  - type: input
+    id: nodes
+    attributes:
+      label: 可能关联节点

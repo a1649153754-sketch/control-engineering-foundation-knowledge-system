@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "date": "2026-08-25",
+  "subject": "控制工程基础（第4版教材与配套习题解）",
+  "chapters": 11,
+  "secondary_nodes": 77,
+  "checklist_items": 385,
+  "rule_formula_cards": 231,
+  "problem_archetypes": 78,
+  "boundary_cards": 44,
+  "decision_trees": 16,
+  "experiments": 20,
+  "personal_links": 12,
+  "data_templates": 7,
+  "repository_name": "control-engineering-foundation-knowledge-system",
+  "expected_pages_url": "https://a1649153754-sketch.github.io/control-engineering-foundation-knowledge-system/",
+  "source_pdfs_included": false,
+  "project_file_count": 69
+}

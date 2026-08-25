@@ -1,0 +1,20 @@
+# Python / site
+.venv/
+__pycache__/
+*.py[cod]
+site/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Personal data
+private/
+data/private-*.csv
+
+# Source books and large binaries
+*.pdf
+*.djvu
+*.epub

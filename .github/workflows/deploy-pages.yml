@@ -1,0 +1,66 @@
+name: Deploy documentation
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate project
+        run: python scripts/validate_project.py
+
+      - name: Build single-file edition
+        run: python scripts/build_bundle.py
+
+      - name: Build documentation
+        run: zensical build --clean
+
+      - name: Stage downloadable single-file edition
+        shell: bash
+        run: |
+          set -euo pipefail
+          version="$(cat VERSION)"
+          mkdir -p site/downloads
+          cp "dist/控制工程基础知识体系_v${version}.md" site/downloads/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

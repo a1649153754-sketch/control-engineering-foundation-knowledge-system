@@ -1,0 +1,23 @@
+name: 知识点补充
+description: 建议新增母题、边界卡、实验或扩展说明
+title: "[补充] "
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 类型
+      options: [知识节点补充, 规则/公式卡, 母题, 边界卡, 决策树, 实验, 软件实现]
+  - type: input
+    id: node
+    attributes:
+      label: 关联稳定节点
+  - type: textarea
+    id: content
+    attributes:
+      label: 内容、条件与失效边界
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: 来源或原创验证

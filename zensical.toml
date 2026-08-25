@@ -1,0 +1,98 @@
+[project]
+site_name = "控制工程基础知识体系"
+site_description = "基于《控制工程基础》第4版与配套习题解的可持续知识框架、公式卡、母题、边界库和实验闭环。"
+site_author = "控制工程基础知识体系贡献者"
+copyright = "Copyright &copy; 2026 控制工程基础知识体系贡献者"
+docs_dir = "docs"
+site_dir = "site"
+site_url = "https://a1649153754-sketch.github.io/control-engineering-foundation-knowledge-system/"
+repo_url = "https://github.com/a1649153754-sketch/control-engineering-foundation-knowledge-system"
+repo_name = "a1649153754-sketch/control-engineering-foundation-knowledge-system"
+edit_uri = "edit/main/docs/"
+extra_css = ["assets/stylesheets/extra.css"]
+nav = [
+  { "首页" = "index.md" },
+  { "体系总览" = "00-overview.md" },
+  { "教材章节" = [
+    { "C1 概论" = "01-introduction.md" },
+    { "C2 控制系统的动态数学模型" = "02-dynamic-models.md" },
+    { "C3 时域瞬态响应分析" = "03-time-response.md" },
+    { "C4 控制系统的频率特性" = "04-frequency-response.md" },
+    { "C5 控制系统的稳定性分析" = "05-stability.md" },
+    { "C6 控制系统的误差分析和计算" = "06-error-analysis.md" },
+    { "C7 控制系统的综合与校正" = "07-design-compensation.md" },
+    { "C8 根轨迹法" = "08-root-locus.md" },
+    { "C9 控制系统的非线性问题" = "09-nonlinear.md" },
+    { "C10 计算机控制系统" = "10-digital-control.md" },
+    { "C11 基于 LabVIEW 的控制系统动态仿真演示软件" = "11-labview.md" },
+  ] },
+  { "复习系统" = [
+    { "跨章节方法库" = "12-method-library.md" },
+    { "三级检查清单" = "13-checklists.md" },
+    { "规则与公式卡" = "14-formula-cards.md" },
+    { "典型母题索引" = "15-problem-archetypes.md" },
+    { "任务决策树" = "16-decision-trees.md" },
+    { "错误边界库" = "17-counterexamples.md" },
+    { "教材—习题解索引" = "18-exercise-index.md" },
+  ] },
+  { "实验与维护" = [
+    { "实验与 MATLAB / LabVIEW" = "19-experiments-matlab.md" },
+    { "复习记录模板" = "20-review-templates.md" },
+    { "项目维护指南" = "21-project-maintenance.md" },
+    { "来源与页码" = "22-source-map.md" },
+    { "附录与速查" = "23-appendices.md" },
+    { "个人高频疑问" = "24-personal-links.md" },
+  ] },
+]
+
+[project.theme]
+language = "zh"
+features = [
+  "content.code.copy", "content.footnote.tooltips", "content.tooltips",
+  "navigation.footer", "navigation.path", "navigation.sections",
+  "navigation.tabs", "navigation.tabs.sticky", "navigation.top",
+  "navigation.tracking", "search.highlight", "toc.follow",
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "切换到浅色模式"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "切换到深色模式"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "跟随系统外观"
+
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+tables = {}
+toc.permalink = true
+pymdownx.arithmatex.generic = true
+pymdownx.betterem = {}
+pymdownx.caret = {}
+pymdownx.details = {}
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.mark = {}
+pymdownx.smartsymbols = {}
+pymdownx.superfences = {}
+pymdownx.tabbed.alternate_style = true
+pymdownx.tabbed.combine_header_slug = true
+pymdownx.tasklist.custom_checkbox = true
+pymdownx.tilde = {}

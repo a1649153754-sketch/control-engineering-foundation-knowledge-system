@@ -1,0 +1,32 @@
+name: Validate pull request
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate project
+        run: python scripts/validate_project.py
+
+      - name: Build single-file edition
+        run: python scripts/build_bundle.py
+
+      - name: Build documentation
+        run: zensical build --clean

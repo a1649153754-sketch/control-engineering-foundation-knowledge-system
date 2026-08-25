@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#24153f"/>
+      <stop offset="100%" stop-color="#6f4aa1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <g fill="none" stroke="#ffffff" opacity="0.20" stroke-width="4">
+    <path d="M70 470 C210 350 310 550 450 410 S700 290 850 410 S1050 530 1140 330"/>
+    <circle cx="240" cy="270" r="85"/>
+    <line x1="240" y1="270" x2="340" y2="205"/>
+    <path d="M735 235 h250"/>
+    <path d="M735 285 h190"/>
+    <path d="M735 335 h130"/>
+  </g>
+  <text x="70" y="150" fill="#fff" font-family="sans-serif" font-size="72" font-weight="700">控制工程基础知识体系</text>
+  <text x="72" y="220" fill="#e8def6" font-family="sans-serif" font-size="32">模型 · 时域 · 频域 · 稳定 · 误差 · 校正 · 根轨迹</text>
+  <text x="72" y="550" fill="#fff" font-family="sans-serif" font-size="28">v1.0.0  ·  77 节点  ·  231 规则卡  ·  78 母题</text>
+</svg>
