@@ -38,6 +38,20 @@ ORDER = [
     "exercises/08-root-locus.md",
     "exercises/09-nonlinear.md",
     "exercises/10-digital-control.md",
+    "27-tsinghua-822-insights.md",
+    "28-recurring-problem-families.md",
+    "tsinghua-822/index.md",
+    "tsinghua-822/1995-1999.md",
+    "tsinghua-822/2000-2004.md",
+    "tsinghua-822/2005-2009.md",
+    "tsinghua-822/2010-2014.md",
+    "tsinghua-822/2015-2019.md",
+    "tsinghua-822/2020-2024.md",
+    "tsinghua-822/2024-deep-solutions.md",
+    "key-problems/index.md",
+    "key-problems/01-source-examples.md",
+    "key-problems/02-lecture-examples.md",
+    "key-problems/03-slide-variants.md",
     "19-experiments-matlab.md",
     "20-review-templates.md",
     "21-project-maintenance.md",
@@ -53,8 +67,9 @@ for name in ORDER:
     if not path.exists():
         raise FileNotFoundError(f"Missing bundle source: {path}")
     parts.append(path.read_text(encoding="utf-8").strip())
-
 DIST.mkdir(exist_ok=True)
 out = DIST / f"控制工程基础知识体系_v{version}.md"
 out.write_text("\n\n---\n\n".join(parts) + "\n", encoding="utf-8", newline="\n")
-print(f"Wrote {out.relative_to(ROOT)} ({out.stat().st_size:,} bytes, {len(ORDER)} source pages)")
+print(
+    f"Wrote {out.relative_to(ROOT)} ({out.stat().st_size:,} bytes, {len(ORDER)} source pages)"
+)

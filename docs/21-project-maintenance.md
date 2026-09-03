@@ -57,7 +57,7 @@
 ```bash
 python scripts/validate_project.py
 python scripts/build_bundle.py
-zensical build --clean
+zensical build --clean --strict
 ```
 
 然后更新：
@@ -90,3 +90,12 @@ zensical build --clean
 ## 8. 数据隐私
 
 `data/` 中公开的是空白模板和不含成绩的题目目录。个人成绩、错题原文、院校信息和私人笔记应放在被 `.gitignore` 忽略的 `private/` 或 `data/private-*.csv`。
+
+
+## TH / KP 卡片维护规则
+
+- `TH-YYYY-NN`：年份大题；`TH-1998-MCNN`：1998选择题。
+- `KP-Axx/Bxx/Sxx`：重点题第一组、第二组、幻灯变体。
+- 每卡必须包含来源、节点、母题、独立路线、结论状态、易错点、模型思考和证据边界。
+- 扫描不清时用 `SOURCE` 标签，不得猜写确定数值。
+- 第三方答案须至少用定义、量纲、另一判据或数值工具完成一次独立复核。

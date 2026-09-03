@@ -8,6 +8,6 @@
 
 - [ ] `python scripts/validate_project.py`
 - [ ] `python scripts/build_bundle.py`
-- [ ] `zensical build --clean`
+- [ ] `zensical build --clean --strict`
 - [ ] 未上传教材、题解、整题或扫描页
 - [ ] 版本、清单和变更日志已同步

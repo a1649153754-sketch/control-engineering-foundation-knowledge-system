@@ -3,6 +3,7 @@
 __pycache__/
 *.py[cod]
 site/
+.cache/
 
 # Editors / OS
 .vscode/

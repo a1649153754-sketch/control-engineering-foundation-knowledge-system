@@ -1,6 +1,6 @@
 # 控制工程基础知识体系
 
-> 基于《控制工程基础（第4版）》与配套《控制工程基础习题解（第4版）》整理的可持续知识库：保留教材章节、术语和分析主线，同时加入稳定编号、LaTeX 公式、193 道逐题解析、母题、边界卡、决策树、实验与复盘系统。
+> 基于《控制工程基础（第4版）》、配套《习题解（第4版）》、1995—2024 清华大学 822 真题与重点题资料建立的可持续知识库。教材结构、逐题解析、真题迁移和模型思考在同一编号体系中联通。
 
 <p align="center">
   <img src="docs/assets/images/social-preview.svg" alt="控制工程基础知识体系封面" width="900">
@@ -8,125 +8,102 @@
 
 ## 当前版本
 
-**v1.1.0 · 2026-08-25**
+**v1.2.0 · 2026-08-31**
 
 | 模块 | 当前规模 |
 | --- | ---: |
-| 教材章节 | 11 |
-| 稳定知识节点 | 77 |
+| 教材章节 / 稳定节点 | 11 / 77 |
 | 三级检查项 | 385 |
 | 核心规则与公式卡 | 231 |
-| LaTeX 显示公式图鉴 | 1 套 |
 | 配套习题逐题解析 | 193 / 193 |
-| 典型母题 | 78 |
-| 错误命题与边界卡 | 44 |
-| 任务决策树 | 16 |
+| 清华 822 真题题目单元 | 190 / 190 |
+| 重点题与讲义来源卡 | 40 / 40 |
+| 来源挂接解析卡总数 | 423 |
+| 典型母题 / 边界卡 / 决策树 | 78 / 44 / 16 |
 | 实验 / MATLAB / LabVIEW 任务 | 20 |
-| 个人高频疑问挂接 | 12 |
 
-## v1.1.0 完善内容
+## v1.2.0 新增
 
-- **真正启用公式渲染**：加入 MathJax 配置与加载脚本，修复只有 Arithmatex、没有浏览器渲染器而显示原始公式的问题。
-- **独立公式图鉴**：把高频关系从宽表格抽出，使用 `\[...\]` 显示公式；移动端长公式可横向滚动。
-- **193 道逐题解析**：覆盖习题解第 1—10 章全部题目，每题均有题意摘要、节点、母题、来源页、解析路线、关键公式、结果校验和易错点。
-- **由题反哺知识库**：每题增加“由本题补入知识库”，并把跨题结论汇总为补充库。
-- **机器可维护**：增加 `data/exercise_catalog.json`、逐题进度 CSV 与覆盖校验，防止以后漏题或重复编号。
+- **1995—2024 真题全量建卡**：30 年共 190 个题目单元；1998 年20道选择题逐项加入答案判断与条件说明。
+- **重点题资料全量索引**：40 张来源卡，保留重复/幻灯变体关系，不把第三方答案冒充官方结论。
+- **每题加入“我的思考”**：写第一动作、结构不变量、替代路线、核验方法和失效边界；明确这是模型补充而非官方答案。
+- **2024 九题深度解析**：对电路、Routh、Nyquist、频域设计、扰动灵敏度、二阶最优和离散极点作完整独立推导。
+- **重复题族地图**：把多年换皮题压缩成12个迁移家族。
+- **章节反哺**：C1—C10 章节末尾自动挂接相关真题，不再让真题成为孤立年份文件。
+- **机器目录与进度表**：新增真题、重点题 JSON 目录与两个复测 CSV，并强化覆盖校验。
 
-## 项目特点
+## 四层学习结构
 
-- **忠于教材结构**：`C1—C11` 与教材 11 章、77 个小节对应。
-- **教材—题解双索引**：记录原书印刷页、PDF 页和题号。
-- **条件优先**：公式同时记录触发信号、主路线、复核方式和失效边界。
-- **逐题闭环**：`C` 节点 → `Q` 母题 → `EX` 逐题解析 → 错误标签 → 复测。
-- **跨域连接**：统一时域、频域、稳定性、误差、校正与根轨迹。
-- **软件与实验**：内置 MATLAB/LabVIEW 任务、数值可信性检查和实验报告模板。
-- **可持续维护**：固定 ID、自动校验、单文件打包和 GitHub Pages 部署。
+```text
+教材节点 C / 规则 K / 母题 Q
+        ↓
+配套习题 EX（193题）
+        ↓
+清华真题 TH（190题目单元）
+        ↓
+重点题 KP（40来源卡）+ 我的迁移思考
+```
 
-## 快速阅读
+## 快速入口
 
 - [在线知识库](https://a1649153754-sketch.github.io/control-engineering-foundation-knowledge-system/)
-- [体系总览](docs/00-overview.md)
-- [习题解逐题解析](docs/exercises/index.md)
-- [教材—习题解逐题索引](docs/18-exercise-index.md)
+- [清华 822 真题全量索引](docs/tsinghua-822/index.md)
+- [2024 年九题深度解析](docs/tsinghua-822/2024-deep-solutions.md)
+- [重点题与答案全量索引](docs/key-problems/index.md)
+- [重复题族与迁移地图](docs/28-recurring-problem-families.md)
+- [真题驱动的知识补充与我的思考](docs/27-tsinghua-822-insights.md)
+- [配套习题 193 题解析](docs/exercises/index.md)
 - [LaTeX 公式图鉴](docs/25-formula-atlas.md)
 - [规则与公式卡](docs/14-formula-cards.md)
 - [习题反哺补充库](docs/26-exercise-supplements.md)
-- [动态数学模型](docs/02-dynamic-models.md)
-- [时域瞬态响应](docs/03-time-response.md)
-- [频率特性](docs/04-frequency-response.md)
-- [稳定性分析](docs/05-stability.md)
-- [误差分析](docs/06-error-analysis.md)
-- [综合与校正](docs/07-design-compensation.md)
-- [根轨迹法](docs/08-root-locus.md)
-- [非线性问题](docs/09-nonlinear.md)
-- [计算机控制系统](docs/10-digital-control.md)
-
-## 在线网站与单文件版
-
-- GitHub Pages：[https://a1649153754-sketch.github.io/control-engineering-foundation-knowledge-system/](https://a1649153754-sketch.github.io/control-engineering-foundation-knowledge-system/)
-- 单文件 Markdown：[dist/控制工程基础知识体系_v1.1.0.md](dist/控制工程基础知识体系_v1.1.0.md)
-- 部署后下载：[控制工程基础知识体系 v1.1.0](https://a1649153754-sketch.github.io/control-engineering-foundation-knowledge-system/downloads/控制工程基础知识体系_v1.1.0.md)
 
 ## 本地使用
 
-需要 Python 3.11 或更高版本：
-
 ```bash
 python -m venv .venv
-
-# Windows PowerShell
-.venv\Scripts\Activate.ps1
-
-# macOS / Linux
-source .venv/bin/activate
-
+# Windows: .venv\Scripts\Activate.ps1
+# macOS/Linux: source .venv/bin/activate
 pip install -r requirements.txt
 python scripts/validate_project.py
 python scripts/build_bundle.py
 zensical serve
 ```
 
-浏览器打开 `http://127.0.0.1:8000`。静态构建：
+## 推荐闭环
 
-```bash
-zensical build --clean
-```
-
-## 推荐学习闭环
-
-1. 读章节节点，先完成 `a/b` 检查项。
-2. 在公式图鉴中看清结构，再回规则卡核对条件。
-3. 独立做题，先记录 `C / Q / EX` 编号与第一动作。
-4. 只在断点处查逐题解析和原习题解。
-5. 把错误标为 `MODEL / STRUCT / COND / ALG / INTERP / VERIFY`。
-6. 3/7/14 天重做，并用另一判据、MATLAB 或极限检查交叉验证。
+1. 先读章节节点和公式边界。
+2. 做教材题 `EX`，证明基础方法可复现。
+3. 做真题 `TH`，先识别题族和第一动作。
+4. 对照重点题 `KP`，只吸收能独立复算的结论。
+5. 错误标为 `MODEL / STRUCT / COND / ALG / INTERP / VERIFY / SOURCE`。
+6. 3/7/14 天复测；图形或小字参数不清时记录证据状态，不猜数字。
 
 ## 仓库结构
 
 ```text
 .
 ├─ docs/
-│  ├─ exercises/             # 第1—10章共193道逐题解析
-│  ├─ javascripts/mathjax.js # 公式渲染配置
-│  ├─ 25-formula-atlas.md    # 独立显示公式
-│  └─ 26-exercise-supplements.md
+│  ├─ exercises/          # 教材习题193题
+│  ├─ tsinghua-822/       # 1995—2024真题190题目单元
+│  ├─ key-problems/       # 重点题/讲义40来源卡
+│  ├─ 25-formula-atlas.md
+│  ├─ 27-tsinghua-822-insights.md
+│  └─ 28-recurring-problem-families.md
 ├─ data/
-│  ├─ exercise_catalog.json  # 逐题机器可读目录
-│  └─ exercise_progress.csv  # 逐题复测模板
-├─ scripts/                  # 校验与单文件打包
-├─ releases/                 # 版本说明
-├─ .github/                  # Actions、Issue 与 PR 模板
-├─ zensical.toml
-├─ PROJECT_MANIFEST.json
-├─ CHANGELOG.md
-└─ ROADMAP.md
+│  ├─ exercise_catalog.json
+│  ├─ tsinghua_822_exam_catalog.json
+│  ├─ key_problem_catalog.json
+│  └─ *_progress.csv
+├─ scripts/
+├─ releases/
+└─ zensical.toml
 ```
 
 ## 来源与版权边界
 
-本仓库不包含两本来源 PDF、扫描页、整套题面或逐字答案。逐题页面发布的是原创题意概括、方法解析、知识映射和简短结果校验；具体图形、参数与完整题面请回到合法取得的原书核对。详见 [来源、页码与版本边界](docs/22-source-map.md)。
+仓库不包含来源 PDF、扫描图、整套逐字题面或大段第三方答案。公开页面保存的是题目摘要、页码定位、原创推导路线、简短可复核结论和模型思考。真题 PDF 只含题面时，项目明确标注“非官方答案”；重点题资料为第三方整理，数值结论必须独立复算。详见 [来源与证据边界](docs/22-source-map.md)。
 
 ## 许可
 
-- 原创知识体系、文字和表格：`CC BY-NC-SA 4.0`，见 `LICENSE`。
-- 脚本、配置和工作流：`MIT`，见 `LICENSE-CODE`。
+- 原创知识体系、文字和表格：`CC BY-NC-SA 4.0`。
+- 脚本、配置和工作流：`MIT`。

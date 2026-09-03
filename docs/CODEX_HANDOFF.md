@@ -48,7 +48,7 @@
 ```bash
 python scripts/validate_project.py
 python scripts/build_bundle.py
-zensical build --clean
+zensical build --clean --strict
 git diff --check
 ```
 

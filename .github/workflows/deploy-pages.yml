@@ -36,7 +36,7 @@ jobs:
         run: python scripts/build_bundle.py
 
       - name: Build documentation
-        run: zensical build --clean
+        run: zensical build --clean --strict
 
       - name: Stage downloadable single-file edition
         shell: bash
