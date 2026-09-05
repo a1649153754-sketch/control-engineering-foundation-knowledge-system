@@ -1,32 +1,28 @@
-# 上传到 GitHub
+# Windows GitHub 同步准备
 
-默认仓库名：
+双击 `UPLOAD_TO_GITHUB.cmd` 可执行本地发布前检查。历史入口名称保留，但脚本现在只刷新远端引用、验证本地内容并显示待审阅的分支推送命令。
 
-```text
-control-engineering-foundation-knowledge-system
-```
+## 使用前提
 
-## 推荐流程
+- 使用已有 Git 克隆，在独立功能分支完成审阅与本地提交；工作树须干净。
+- `origin` 的抓取和推送地址均指向 `a1649153754-sketch/control-engineering-foundation-knowledge-system`。
+- Git、Python 和 Zensical 可用；可用 `-Python`、`-Zensical` 参数指定已安装的可执行文件。
+- 解压候选包必须先在已有仓库的独立分支中审阅；此入口不把无 Git 历史的目录自动接到远端历史。
 
-1. 在 GitHub 创建空仓库，或让脚本创建。
-2. 不要提前添加 README、`.gitignore` 或 License；项目中已经包含。
-3. Windows 双击 `UPLOAD_TO_GITHUB.cmd`。
-4. 在官方浏览器页面完成 `gh auth login`，不要把密码或 Token 粘贴到聊天。
-5. 上传后进入 `Settings → Pages`，将 Source 设为 `GitHub Actions`。
+## 检查流程
 
-## 手动命令
+1. 确认仓库根目录、功能分支、干净工作树和 `origin` 地址。
+2. 抓取 `origin/main`，确认当前分支包含远端主分支并至少领先一笔提交。
+3. 执行项目校验、单文件构建、严格网站构建、再次校验和提交差异空白检查；任一步失败立即停止。
+4. 确认构建没有改变工作树、HEAD 或当前分支。
+5. 显示仓库、版本、基准提交、待推送提交与精确目标分支，供最终审阅。
 
-```bash
-git init
-git add .
-git commit -m "feat: publish control engineering foundation knowledge system v1.0.0"
-git branch -M main
-git remote add origin https://github.com/a1649153754-sketch/control-engineering-foundation-knowledge-system.git
-git push -u origin main
-```
+脚本不会执行 `reset`、批量暂存、提交、分支改名、地址重写、仓库创建、推送或 PR 创建，也不要求 GitHub CLI 登录。
 
-预计 Pages 地址：
+## 确认后的远端操作
 
-```text
-https://a1649153754-sketch.github.io/control-engineering-foundation-knowledge-system/
-```
+取得明确的远端写入授权后，重新核对基准和提交，再执行显示的普通分支推送命令，并以该分支创建指向 `main` 的 PR。分支已有远端改动时，先审阅差异；不得强制覆盖。
+
+PR 创建会运行 `Validate pull request`。当前 Pages 工作流由 `main` 推送或手动调度触发；创建功能分支和 PR 不会自动部署网站。合并、打标签、Release 和手动 Pages 部署分别处理。
+
+不要用历史版上传脚本操作本地候选分支；旧脚本中的分支重置、改名和直接推送已在本版本移除。

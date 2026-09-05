@@ -141,3 +141,14 @@
 - [查看 LaTeX 公式图鉴](25-formula-atlas.md)
 - [查看跨题补充库](26-exercise-supplements.md)
 
+<!-- TSINGHUA822:START -->
+## 清华 822 真题挂接（12题）
+
+> 下面只给题号与主任务，详细解析进入真题页面。一个综合题可能同时挂入多个章节。
+
+- **1998**：[TH-1998-MC01](tsinghua-822/1995-1999.md#th-1998-mc01)、[TH-1998-MC02](tsinghua-822/1995-1999.md#th-1998-mc02)、[TH-1998-MC04](tsinghua-822/1995-1999.md#th-1998-mc04)、[TH-1998-MC05](tsinghua-822/1995-1999.md#th-1998-mc05)、[TH-1998-MC06](tsinghua-822/1995-1999.md#th-1998-mc06)、[TH-1998-MC10](tsinghua-822/1995-1999.md#th-1998-mc10)、[TH-1998-MC11](tsinghua-822/1995-1999.md#th-1998-mc11)、[TH-1998-MC14](tsinghua-822/1995-1999.md#th-1998-mc14)、[TH-1998-MC16](tsinghua-822/1995-1999.md#th-1998-mc16)、[TH-1998-MC17](tsinghua-822/1995-1999.md#th-1998-mc17)、[TH-1998-MC18](tsinghua-822/1995-1999.md#th-1998-mc18)、[TH-1998-MC19](tsinghua-822/1995-1999.md#th-1998-mc19)
+
+!!! tip "我的思考：本章如何被真题重新定义"
+    概念题数量不多，但它们决定后续术语是否严格：稳定、快速、准确和抗扰必须分开。
+
+<!-- TSINGHUA822:END -->

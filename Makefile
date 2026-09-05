@@ -7,7 +7,7 @@ serve:
 	zensical serve
 
 build:
-	zensical build --clean
+	zensical build --clean --strict
 
 validate:
 	python scripts/validate_project.py
