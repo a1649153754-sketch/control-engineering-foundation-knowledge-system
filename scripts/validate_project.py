@@ -581,6 +581,16 @@ for token in [
     if token not in deep_2024_09:
         fail(f"TH-2024-09 deep solution inconsistent: {token}")
 exam_2024_09 = next(x for x in exam if x["id"] == "TH-2024-09")
+source_map = (DOCS / "22-source-map.md").read_text(encoding="utf-8")
+card_2024_09 = exam_text.split("## TH-2024-09｜", 1)[1]
+for label, evidence_text in [
+    ("catalogue", exam_2024_09["evidence_status"]),
+    ("card", card_2024_09),
+    ("deep solution", deep_2024_09),
+    ("source map", source_map),
+]:
+    if "本轮未取得原卷 PDF p.91" not in evidence_text:
+        fail(f"TH-2024-09 original-source limitation missing: {label}")
 for token in ["-0.6±0.6j", "-0.8±0.8j"]:
     if token not in exam_2024_09["summary"]:
         fail(f"TH-2024-09 catalogue missing pole: {token}")
