@@ -40,6 +40,8 @@ jobs:
       - name: Build debug APK
         working-directory: jev
         shell: bash
+        env:
+          JEV_KEYSTORE_PROPS: /tmp/jev-release.properties
         run: |
           chmod +x gradlew
           ./gradlew --no-daemon assembleDebug
